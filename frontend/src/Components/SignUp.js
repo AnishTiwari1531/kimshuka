@@ -8,6 +8,13 @@ const SignUp = () => {
     const [password, setPassword] = useState("");
     const [error, setError] = useState(false);
 
+    const clearForm = () => {
+        setFirstName("");
+        setLastName("");
+        setEmail("");
+        setPassword("");
+    }
+
     const onClickData = async () => {
         console.log(firstName, lastName, email, password);
         if (!firstName || !lastName || !email || !password) {
@@ -24,6 +31,7 @@ const SignUp = () => {
         result = await result.json()
         console.log(result);
         alert("Registration Successful!");
+        clearForm();
     }
 
     return (
