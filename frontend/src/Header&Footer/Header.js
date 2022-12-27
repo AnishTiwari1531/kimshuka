@@ -17,7 +17,7 @@ const Header = () => {
                 src="https://static.wixstatic.com/media/2a1378_c3dd219292084d6e86bd4bb694afc605~mv2.png/v1/fit/w_2500,h_1330,al_c/2a1378_c3dd219292084d6e86bd4bb694afc605~mv2.png" />
             {
                 data ? <ul className="nav-ul nav-right">
-                    <li><Link onClick={logout} to="/login">Welcome &nbsp; {data && JSON.parse(data).user}! &nbsp; To Kimshuka! &nbsp; Logout</Link></li>
+                    <li><Link onClick={logout} to="/login">Welcome {data && JSON.parse(data).user} &nbsp; To Kimshuka! &nbsp; Logout</Link></li>
                 </ul>
                     :
                     <ul className="nav-ul nav-right">
