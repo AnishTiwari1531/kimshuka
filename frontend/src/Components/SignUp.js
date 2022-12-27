@@ -23,6 +23,7 @@ const SignUp = () => {
         });
         result = await result.json()
         console.log(result);
+        alert("Registration Successful!");
     }
 
     return (
