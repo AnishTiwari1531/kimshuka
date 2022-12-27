@@ -16,7 +16,7 @@ module.exports.authentication= async function (req, res, next) {
     if (Date.now() > (decoded.exp) * 1000) {
       return res.status(440).send({ status: false, message: "Session expired! Please login again." })//​​440 Login Timeout
     }
-    jwt.verify(token, "Fuerte", function (err, decoded) {
+    jwt.verify(token, "Kimshuka", function (err, decoded) {
       if (err) {
         return res.status(400).send({ status: false, message: "token invalid" });
       }

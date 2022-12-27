@@ -16,7 +16,7 @@ app.use((req, res, next) => {
 
 
 app.use(express.json()); //express.json();
-app.use(multer().any());    //without it req.files = undefined , if file missing in req => req.files = []
+app.use(multer().any());  
 app.use('/', route);
 
 require("dotenv").config()
