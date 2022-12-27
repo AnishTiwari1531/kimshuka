@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { NavLink, useNavigate } from 'react-router-dom'
+import React, { useState } from "react";
+import { NavLink } from 'react-router-dom'
 
 const SignUp = () => {
     const [firstName, setFirstName] = useState("");
@@ -7,15 +7,6 @@ const SignUp = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState(false);
-    const navigate = useNavigate;
-
-    useEffect(() => {
-        const data = localStorage.getItem("user");
-        if (data) {
-            navigate("/")
-        }
-    })
-
 
     const onClickData = async () => {
         console.log(firstName, lastName, email, password);
@@ -32,8 +23,6 @@ const SignUp = () => {
         });
         result = await result.json()
         console.log(result);
-        localStorage.setItem('user', JSON.stringify(result));
-        navigate('/login');
     }
 
     return (

@@ -6,7 +6,7 @@ const Header = () => {
     const navigate = useNavigate();
     const logout = () => {
         localStorage.clear();
-        navigate('/signup')
+        navigate('/')
     }
 
     return (
