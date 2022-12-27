@@ -19,7 +19,6 @@
   },
   "homepage": "https://github.com/AnishTiwari1531/kimshuka#readme",
   "dependencies": {
-    "aws-sdk": "^2.1282.0",
     "bcrypt": "^5.1.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
